@@ -29,8 +29,8 @@ const data = [
       className="mb-3"
      >   
        {
-          data && data.map( item => 
-              <Tab  eventKey={item.title} title={item.title}>
+          data && data.map( (item, index) => 
+              <Tab key={index}  eventKey={item.title} title={item.title}>
                    <div className="listData d-flex align-items-center gap-3 p-3 border-bottom">
                        <span>1</span>
                        <p className='m-0'>বিরোধী দলগুলোকে দমন করতে মামলাকে অস্ত্র হিসেবে নিয়েছে আ. লীগ : ফখরুল</p>

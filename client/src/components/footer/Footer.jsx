@@ -39,7 +39,7 @@ import './Footer.css';
       </Container>
     </div>
     <div className="copyright-msg">
-        <p>© ২০২২ | চ্যানেল ২৪ কর্তৃক সর্বসত্ব ® সংরক্ষিত |</p>
+        <p className='p-0 mt-0'>© ২০২২ | চ্যানেল ২৪ কর্তৃক সর্বসত্ব ® সংরক্ষিত |</p>
       </div>
   </footer>
  </>

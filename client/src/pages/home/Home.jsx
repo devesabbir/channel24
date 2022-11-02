@@ -6,8 +6,9 @@ import './Home.css'
 import { Link } from "react-router-dom";
 import LeadNewsList from '../../components/leadnewslist/LeadNewsList'
 import NewsGrid from '../../components/newsgrid/NewsGrid'
-import Icon from '../../assets/favicon.ico'
 import NamazTime from '../../components/namaztime/NamazTime'
+import SectionTitle from '../../components/title/SectionTitle'
+import Slider from '../../components/slider/Slider'
 
 function Home() {
   
@@ -65,8 +66,8 @@ function Home() {
                 <Col lg={3} className={'border-inner-left'}>
                      <div className="sideBar pt-4">
                           <Sidebar/>
-                        <div className="allnews">
-                          <a href=""><p>সব খবর <i class="fas fa-angle-double-right"></i></p></a>
+                         <div className="allnews">
+                          <a href=""><p>সব খবর <i className="fas fa-angle-double-right"></i></p></a>
                         </div>
                         <NamazTime/>
                      </div>
@@ -75,8 +76,8 @@ function Home() {
          </Container>
   
          <Container>    
-         <div className="country">
-         <div class="SPSecTitle "><a href="/"><h2 className='d-flex align-items-center gap-2'><img loading="lazy" src={Icon} alt="" width="18" height="18" class="SPSecTitleIcon"/>জাতীয়</h2></a></div>
+               <div className="country">
+                 <SectionTitle title={'জাতীয়'}/>
                  <Row>
                      <Col lg={9}>
                          <Row>
@@ -99,7 +100,33 @@ function Home() {
                  </Row>
                 </div>
          </Container>
-     
+
+         <Container>
+               <SectionTitle title={'রাজনীতি'} /> 
+               <Row>
+                   <Col lg={6} className={'border-inner-right'}>
+                       <NewsGrid/>
+                   </Col>
+                   <Col lg={3} >
+                      <LeadNewsList/>
+                      <LeadNewsList/>
+                      <LeadNewsList/>
+                      <LeadNewsList/>
+                      <LeadNewsList/>
+                   </Col>
+                   <Col lg={3} className={'border-inner-left'}>
+                      <LeadNewsList/>
+                      <LeadNewsList/>
+                   </Col>
+               </Row>
+         </Container>
+
+          <Container>
+               <SectionTitle title={'চ্যানেল 24 স্পেশাল'}/>
+               <div className="slider">
+                   <Slider/>
+                </div> 
+         </Container> 
     </main>
   )
 }

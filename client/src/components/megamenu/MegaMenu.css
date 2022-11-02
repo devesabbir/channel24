@@ -2,3 +2,7 @@
     background-color: #f8f9fa;
     padding: 20px;
 }
+
+.megamenu ul li {
+    padding: 10px 0;
+}

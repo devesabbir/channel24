@@ -4,6 +4,7 @@ import LiveImg from '../../assets/live2.gif'
 import logo from '../../assets/logo.webp'
 import { Container, Row, Col, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import MegaMenu from '../megamenu/MegaMenu';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
 
@@ -15,18 +16,18 @@ function NavBar() {
              
                     <Col lg={9}>
                        <div className="dateAndTime">
-                         <p><i class="fa-solid fa-location-pin"></i> ঢাকা <i class="fa-solid fa-calendar"></i> মঙ্গলবার , ০১ নভেম্বর ২০২২, ১৬ অগ্রহায়ণ ১৪২৯, ০৬ রবিউস সানি ১৪৪৪</p>
+                         <p><i className="fa-solid fa-location-pin"></i> ঢাকা <i className="fa-solid fa-calendar"></i> মঙ্গলবার , ০১ নভেম্বর ২০২২, ১৬ অগ্রহায়ণ ১৪২৯, ০৬ রবিউস সানি ১৪৪৪</p>
                        </div>
                     </Col>
 
                     <Col lg={3}>            
                     <div className="topSocial">
                          <ul>
-                          <li className='fb-icon'><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                             <li className='yt-icon'><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                             <li className='tw-icon'><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                             <li className='link-icon'><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                             <li className='en-icon'><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                          <li className='fb-icon'><a href="#"><i className="fa-brands fa-facebook"></i></a></li>
+                             <li className='yt-icon'><a href="#"><i className="fa-brands fa-youtube"></i></a></li>
+                             <li className='tw-icon'><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
+                             <li className='link-icon'><a href="#"><i className="fa-brands fa-linkedin-in"></i></a></li>
+                             <li className='en-icon'><a href="#"><i className="fa-solid fa-envelope"></i></a></li>
                              <li className='liveImg'><a href="#"><img src={LiveImg} alt="" /></a></li>
                          </ul>
                     </div>
@@ -47,12 +48,13 @@ function NavBar() {
                              </div>
                          </Col>
                          <Col lg={9}>
-                         
+                          
                          </Col>
                      </Row>
                 </Container>
             </div>
-              {/* headerLogo end */}
+
+            {/* headerLogo end */}
             {/* headerNav  Start*/}
 
             <div className="bg-light headerNav">
@@ -64,70 +66,69 @@ function NavBar() {
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                   <Nav>
-                                    <Nav.Link href="#home">প্রচ্ছদ</Nav.Link>
-                                    <Nav.Link href="#link">জাতীয়</Nav.Link>
-                                    <Nav.Link href="#link">রাজনীতি <i class="fa-solid fa-caret-down"></i>
+                                    <Link to="/">প্রচ্ছদ</Link>
+                                    <Link to="/">জাতীয়</Link>
+                                    <Link to="/">রাজনীতি <i className="fa-solid fa-caret-down"></i>
                                          
                                           <ul className='dropDown'>
-                                              <li><Nav.Link> আওয়ামী লীগ</Nav.Link></li>
-                                              <li><Nav.Link> বিএনপি</Nav.Link></li>
-                                              <li><Nav.Link> অন্যান্য</Nav.Link></li>
+                                              <li><Link to={'/'}> আওয়ামী লীগ</Link></li>
+                                              <li><Link to={'/'}> বিএনপি</Link></li>
+                                              <li><Link to={'/'}> অন্যান্য</Link></li>
                                           </ul>
                                     
-                                    </Nav.Link>
-                                    <Nav.Link href="#link">আন্তর্জাতিক <i class="fa-solid fa-caret-down"></i>
+                                    </Link>
+                                    <Link to="#link">আন্তর্জাতিক <i className="fa-solid fa-caret-down"></i>
                                     
                                     
                                          <ul className='dropDown'>
-                                              <li><Nav.Link>আমেরিকা</Nav.Link></li>
-                                              <li><Nav.Link> ইউরোপ</Nav.Link></li>
-                                              <li><Nav.Link> অস্ট্রেলিয়া</Nav.Link></li>
-                                              <li><Nav.Link> এশিয়া</Nav.Link></li>
-                                              <li><Nav.Link> আফ্রিকা</Nav.Link></li>
-                                              <li><Nav.Link> মধ্যপ্রাচ্য</Nav.Link></li>
+                                              <li><Link to={'/'}>আমেরিকা</Link></li>
+                                              <li><Link to={'/'}> ইউরোপ</Link></li>
+                                              <li><Link to={'/'}> অস্ট্রেলিয়া</Link></li>
+                                              <li><Link to={'/'}> এশিয়া</Link></li>
+                                              <li><Link to={'/'}> আফ্রিকা</Link></li>
+                                              <li><Link to={'/'}> মধ্যপ্রাচ্য</Link></li>
                                           </ul>
                                     
-                                    </Nav.Link>
-                                    <Nav.Link href="#link">অর্থনীতি <i class="fa-solid fa-caret-down"></i>
+                                    </Link>
+                                    <Link to="#link">অর্থনীতি <i className="fa-solid fa-caret-down"></i>
                                             
                                         <ul className='dropDown'>
-                                              <li><Nav.Link>কর্পোরেট</Nav.Link></li>
+                                              <li><Link to={'/'}>কর্পোরেট</Link></li>
                                            
-                                          </ul>
+                                        </ul>
                                     
                                     
-                                    </Nav.Link>
-                                    <Nav.Link href="#link">খেলা <i class="fa-solid fa-caret-down"></i>
+                                    </Link>
+                                    <Link to="#link">খেলা <i className="fa-solid fa-caret-down"></i>
                                          
-                                         <ul className='dropDown'>
-                                              <li><Nav.Link>ক্রিকেট</Nav.Link></li>
-                                              <li><Nav.Link> ফুটবল</Nav.Link></li>
-                                              <li><Nav.Link> অন্যান্য</Nav.Link></li>
-                                       
-                                          </ul>
+                                      <ul className='dropDown'>
+                                        <li><Link to={'/sports/cricket'}> ক্রিকেট </Link></li>
+                                        <li><Link to={'/api'}> ফুটবল </Link></li>
+                                        <li><Link to={'/api'}> অন্যান্য </Link></li>
+                                       </ul>
                                     
                                     
-                                    </Nav.Link>
-                                    <Nav.Link href="#link">বিনোদন</Nav.Link>
-                                    <Nav.Link href="#link">সারাদেশ <i class="fa-solid fa-caret-down"></i>
+                                    </Link>
+                                    <Link to="#link">বিনোদন</Link>
+                                    <Link to="#link">সারাদেশ <i className="fa-solid fa-caret-down"></i>
                                       
                                        <ul className='dropDown'>
-                                              <li><Nav.Link>ঢাকা</Nav.Link></li>
-                                              <li><Nav.Link>চট্টগ্রাম</Nav.Link></li>
-                                              <li><Nav.Link>খুলনা</Nav.Link></li>
-                                              <li><Nav.Link>রাজশাহী</Nav.Link></li>
-                                              <li><Nav.Link>সিলেট</Nav.Link></li>
-                                              <li><Nav.Link>বরিশাল</Nav.Link></li>
-                                              <li><Nav.Link>রংপুর</Nav.Link></li>
-                                              <li><Nav.Link>ময়মনসিংহ</Nav.Link></li>
+                                              <li><Link to={'/'}>ঢাকা</Link></li>
+                                              <li><Link to={'/'}>চট্টগ্রাম</Link></li>
+                                              <li><Link to={'/'}>খুলনা</Link></li>
+                                              <li><Link to={'/'}>রাজশাহী</Link></li>
+                                              <li><Link to={'/'}>সিলেট</Link></li>
+                                              <li><Link to={'/'}>বরিশাল</Link></li>
+                                              <li><Link to={'/'}>রংপুর</Link></li>
+                                              <li><Link to={'/'}>ময়মনসিংহ</Link></li>
                                             
                                           </ul>
-                                    
-                                    </Nav.Link>
-                                    <Nav.Link href="#link">লাইফস্টাইল</Nav.Link>
-                                    <Nav.Link href="#link">ছবির গল্প</Nav.Link>
-                                    <Nav.Link href="#link">ভিডিও গ্যালারি</Nav.Link>
-                                    <Nav.Link className='mega' href="#link">সব <i class="fa-solid fa-bars"></i>
+                    
+                                    </Link>
+                                    <Link to="#link">লাইফস্টাইল</Link>
+                                    <Link to="#link">ছবির গল্প</Link>
+                                    <Link to="#link">ভিডিও গ্যালারি</Link>
+                                    <Link className='mega' to="#link">সব <i className="fa-solid fa-bars"></i>
                                     
                                     <div className="megaMenuWrapper">
           
@@ -136,10 +137,10 @@ function NavBar() {
                                     </div>
                                    
                                     
-                                    </Nav.Link>
+                                    </Link>
                                   </Nav>
                                   <div className="search ms-3">
-                                      <button><i class="fa-regular fa-magnifying-glass"></i></button>
+                                      <button><i className="fa-regular fa-magnifying-glass"></i></button>
                                   </div>
                                 </Navbar.Collapse>
                               </Container>
