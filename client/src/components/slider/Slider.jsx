@@ -6,11 +6,55 @@ import SlideCard from './slidecard/SlideCard';
 
 function Slider() {
 
+    // Demo data 
+
+    let data = [
+       {
+        img:'https://backoffice.channel24bd.tv/media/imgAll/2022November/SM/tumbro-1667281148.jpg',
+        title:'রাত নামলেই রোহিঙ্গা ক্যাম্পে টার্গেট কিলিং আতঙ্ক (ভিডিও)'
+  
+      },
+
+      {
+        img:'https://backoffice.channel24bd.tv/media/imgAll/2022November/SM/tumbro-1667281148.jpg',
+        title:'রাত নামলেই রোহিঙ্গা ক্যাম্পে টার্গেট কিলিং আতঙ্ক (ভিডিও)'
+  
+      },
+
+      {
+        img:'https://backoffice.channel24bd.tv/media/imgAll/2022November/SM/tumbro-1667281148.jpg',
+        title:'রাত নামলেই রোহিঙ্গা ক্যাম্পে টার্গেট কিলিং আতঙ্ক (ভিডিও)'
+  
+      },
+
+      {
+        img:'https://backoffice.channel24bd.tv/media/imgAll/2022November/SM/tumbro-1667281148.jpg',
+        title:'রাত নামলেই রোহিঙ্গা ক্যাম্পে টার্গেট কিলিং আতঙ্ক (ভিডিও)'
+  
+      },
+      {
+        img:'https://backoffice.channel24bd.tv/media/imgAll/2022November/SM/tumbro-1667281148.jpg',
+        title:'রাত নামলেই রোহিঙ্গা ক্যাম্পে টার্গেট কিলিং আতঙ্ক (ভিডিও)'
+  
+      },
+      {
+        img:'https://backoffice.channel24bd.tv/media/imgAll/2022November/SM/tumbro-1667281148.jpg',
+        title:'রাত নামলেই রোহিঙ্গা ক্যাম্পে টার্গেট কিলিং আতঙ্ক (ভিডিও)'
+  
+      },
+      {
+        img:'https://backoffice.channel24bd.tv/media/imgAll/2022November/SM/tumbro-1667281148.jpg',
+        title:'রাত নামলেই রোহিঙ্গা ক্যাম্পে টার্গেট কিলিং আতঙ্ক (ভিডিও)'
+  
+      },
+    ]
+  
+
   const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 4,
         slidesToScroll: 1,
         draggable:true,
         responsive: [
@@ -44,26 +88,15 @@ function Slider() {
 
   return (
     <div>
-    <Sliderr {...settings}>
-      <div>
-         <SlideCard/>
-      </div>
-      <div>
-         <SlideCard/>
-      </div>
-      <div>
-        <SlideCard/>
-      </div>
-      <div>
-         <SlideCard/>
-      </div>
-      <div>
-        <SlideCard/>
-      </div>
-      <div>
-        <SlideCard/>
-      </div>
-    </Sliderr>
+     <Sliderr {...settings}>
+          {
+            data && data.map ( (item,index) => (
+            <div key={index}>
+                <SlideCard data={item}/>
+            </div> 
+           ))
+         }
+     </Sliderr>
   </div>
   )
 }
