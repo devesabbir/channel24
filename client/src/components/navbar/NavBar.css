@@ -152,7 +152,7 @@ header{
    transform-origin: left;
    transition: all .7s;
    height: 274px;
-   z-index: 9999!important;
+   z-index: 999999;
  
 }
 
