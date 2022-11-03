@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Sliderr from "react-slick";
 import SlideCard from './slidecard/SlideCard';
+import './Slider.css'
 
 function Slider() {
 

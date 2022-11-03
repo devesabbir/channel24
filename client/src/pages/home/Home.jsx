@@ -123,7 +123,7 @@ function Home() {
 
           <Container>
                <SectionTitle title={'চ্যানেল 24 স্পেশাল'}/>
-               <div className="slider">
+               <div className="slider pb-5">
                    <Slider/>
                 </div> 
          </Container> 
